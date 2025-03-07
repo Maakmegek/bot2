@@ -30,7 +30,9 @@ document.getElementById('workoutBtn').addEventListener('click', async () => {
         const result = await response.json();
         if (result.status === "success") {
             alert("Тренировка засчитана!");
-            fetchData();
+            fetchData(); // Обновляем данные
+        } else if (result.status === "already_logged") {
+            alert("Вы уже тренировались сегодня!");
         }
     } catch (error) {
         console.error("Ошибка:", error);
