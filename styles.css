@@ -1,23 +1,23 @@
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .container {
     text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 h1 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #333;
 }
 
@@ -26,34 +26,34 @@ h1 {
     color: #ff5722;
 }
 
-/* Стили для кнопки */
 button {
     background-color: #ff5722;
     color: white;
     border: none;
-    border-radius: 50%; /* Делаем кнопку круглой */
-    width: 80vw; /* Ширина кнопки (80% ширины экрана) */
-    height: 80vw; /* Высота кнопки (80% ширины экрана) */
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    max-width: 80vw;
+    max-height: 80vw;
     font-size: 24px;
-    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Анимация */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 button:hover {
-    background-color: #e64a19; /* Темнее при наведении */
-    transform: scale(1.05); /* Увеличиваем кнопку */
+    background-color: #e64a19;
+    transform: scale(1.05);
 }
 
 button:active {
-    transform: scale(0.95); /* Уменьшаем кнопку при нажатии */
+    transform: scale(0.95);
 }
 
-/* Анимация пульсации */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -61,5 +61,5 @@ button:active {
 }
 
 button {
-    animation: pulse 2s infinite; /* Постоянная пульсация */
+    animation: pulse 2s infinite;
 }
